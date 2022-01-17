@@ -34,10 +34,11 @@ function App() {
     <div className="app">
       <div style={{fontSize: '3rem'}}>{cash}</div>
       <div style={{display: 'flex'}}>
-        <button onClick={() => addCash(Number(prompt()))}>Пополнить счет</button>
-        <button onClick={() => getCash(Number(prompt()))}>Снять со счета</button>
-        <button onClick={() => addCustomer(prompt())}>Добавить клинта</button>
-        <button onClick={() => dispatch(fetchCustomers())}>Добавить клинтов</button>
+        <button onClick={() => addCash(1)}>Инкремент++</button>
+        <button onClick={() => getCash(1)}>Декримент--</button>
+        {/* <button onClick={() => addCustomer(prompt())}>Добавить клинта</button>
+        <button onClick={() => dispatch(fetchCustomers())}>Добавить клинтов</button> */}
+        <button onClick={() => dispatch(fetchCustomers())}>Получить юзеров</button>
       </div>
       {customers.length
         ?
